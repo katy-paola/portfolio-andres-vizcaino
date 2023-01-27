@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  background-color: #5B8FB9;
+  color: #301E67;
+}
+
+h1 {
+  font-size: calc(0.9rem + 0.3vw);
+  font-weight: 600;
+  color: #03001C;
+}
+
+.article,
+.card,
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 30px;
+  text-align: justify;
+}
+
+.subtitle {
+  font-size: calc(0.7rem + 0.3vw);
+  color: #03001C;
+}
+
+p {
+  font-size: calc(0.6rem + 0.3vw);
+  font-weight: 400;
+  color: #301E67;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "section" "paragraph" "bio" "goals" "motivations" "experience" "proyects";
+  grid-gap: 8px;
+  padding: 20px;
+  min-width: 300px;
+  max-width: 1500px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.grid-container > * {
+  background-color: #f1f1f1;
+  color: #FFFFFF;
+  border-radius: 15px;
+}
+
+.grid-container > :first-child {
+  grid-area: section;
+}
+
+.grid-container > :nth-child(2) {
+  grid-area: paragraph;
+}
+
+.grid-container > :nth-child(3) {
+  grid-area: bio;
+}
+
+.grid-container > :nth-child(4) {
+  grid-area: goals;
+}
+
+.grid-container > :nth-child(5) {
+  grid-area: motivations;
+}
+
+.grid-container > :nth-child(6) {
+  grid-area: experience;
+}
+
+.grid-container > :last-child {
+  grid-area: proyects;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+.section .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  width: 100%;
+}
+.section .header .photo {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  border: 1px solid rgba(48, 30, 103, 0.4);
+}
+.section .header .data {
+  display: flex;
+  flex-direction: column;
+}
+.section .header .data h1 {
+  font-size: calc(0.9rem + 0.3vw);
+  font-weight: 600;
+  color: #03001C;
+}
+.section .header .data h2 {
+  font-size: calc(0.5rem + 0.3vw);
+  font-weight: 600;
+  color: rgba(3, 0, 28, 0.7);
+}
+.section .secondary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section .secondary .about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+.section .secondary .about ul {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.section .secondary .about ul li {
+  list-style: none;
+  font-size: calc(0.4rem + 0.3vw);
+  text-transform: uppercase;
+  padding: 3px;
+  letter-spacing: 1px;
+  color: #301E67;
+  font-weight: bold;
+}
+.section .secondary .about .item {
+  align-items: end;
+  border-right: 1px solid rgba(48, 30, 103, 0.4);
+}
+.section .secondary .qualities {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.section .secondary .qualities li {
+  list-style: none;
+  font-size: calc(0.4rem + 0.3vw);
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 2px 4px;
+  background: #B6EADA;
+  color: #301E67;
+  border-radius: 5px;
+}
+.section .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 10px;
+}
+.section .contact li,
+.section .contact li a {
+  list-style: none;
+  color: #301E67;
+  font-size: calc(0.6rem + 0.3vw);
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.section .contact li span:before,
+.section .contact li a span:before {
+  color: inherit;
+}
+.section .contact li a,
+.section .contact li a a {
+  text-decoration: none;
+}
+.section .contact li a:hover,
+.section .contact li a a:hover {
+  text-decoration: underline;
+}
+
+.slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  gap: 4px;
+}
+.slogan > * {
+  color: #301E67;
+  font-weight: bold;
+}
+.slogan blockquote {
+  font-size: calc(0.6rem + 0.3vw);
+}
+.slogan blockquote:before {
+  content: open-quote;
+}
+.slogan blockquote:after {
+  content: close-quote;
+}
+.slogan cite {
+  font-size: calc(0.5rem + 0.3vw);
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.experience .container-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.experience .container-cards .card {
+  background-color: #B6EADA;
+  border-radius: 7px;
+  width: 100%;
+  padding: calc(30px - 0.5vw);
+}
+.experience .container-cards .card.igloo {
+  border-top: 2px solid #FF003C;
+}
+.experience .container-cards .card.sima {
+  border-top: 2px solid #000;
+}
+.experience .container-cards .card .logo {
+  width: auto;
+  height: 30px;
+}
+.experience .container-cards .card .card-title {
+  font-size: calc(0.8rem + 0.3vw);
+  color: #301E67;
+}
+.experience .container-cards .card .card-description {
+  line-height: 1.7;
+}
+.experience .container-cards .card .info-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.experience .container-cards .card .info-date .card-rol,
+.experience .container-cards .card .info-date .card-date {
+  font-size: calc(0.5rem + 0.3vw);
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.projects .container-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+.projects .container-projects .project {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.projects .container-projects .project .project-title {
+  width: 100%;
+  text-align: center;
+  font-size: calc(0.8rem + 0.3vw);
+  color: #301E67;
+}
+.projects .container-projects .project .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.projects .container-projects .project .links .link {
+  font-size: calc(0.5rem + 0.3vw);
+  font-weight: 600;
+  color: #301E67;
+  background-color: #B6EADA;
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 3px 10px;
+  border: 2px solid #B6EADA;
+}
+.projects .container-projects .project .links .link:last-of-type {
+  background-color: transparent;
+}
+.projects .container-projects .project .links .link:hover {
+  transform: scale(1.05);
+}
+
+@media only screen and (min-width: 510px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "section       section" "paragraph     paragraph" "bio           bio" "goals         motivations" "experience    experience" "proyects      proyects";
+  }
+  .section .contact {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .projects .container-projects {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .projects .container-projects .project {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 678px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1.5fr);
+    grid-template-areas: "section           section" "paragraph         paragraph" "bio               bio" "goals             motivations" "experience        proyects";
+  }
+  .section .secondary {
+    flex-direction: row;
+  }
+  .section .secondary .qualities {
+    width: 100%;
+  }
+  .projects {
+    justify-content: space-between;
+  }
+  .projects .container-projects {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex: 1;
+  }
+  .projects .container-projects .project {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 834px) {
+  .grid-container {
+    grid-template-columns: 1.8fr repeat(2, 1.5fr);
+    grid-template-areas: "section       paragraph       paragraph" "section       bio             bio" "section       goals           motivations" "experience    experience      experience" "proyects      proyects        proyects";
+  }
+  .section {
+    justify-content: space-around;
+  }
+  .section .header .photo {
+    width: 50px;
+    height: 50px;
+  }
+  .section .secondary {
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 1;
+  }
+  .section .contact {
+    flex-wrap: wrap;
+  }
+  .experience .container-cards {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+  .experience .container-cards .card {
+    justify-content: space-between;
+    width: 45%;
+  }
+  .projects .container-projects {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .projects .container-projects .project {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: 1.5fr repeat(2, 0.7fr) 1fr;
+    grid-template-areas: "section       paragraph       paragraph       paragraph" "section       bio             bio             bio" "section       goals           motivations     proyects" "experience    experience      experience      proyects";
+    grid-gap: 20px;
+    padding: 35px;
+  }
+  .section .header {
+    flex-direction: column;
+  }
+  .section .header .photo {
+    width: 120px;
+    height: 120px;
+  }
+  .section .header .data {
+    align-items: center;
+  }
+  .section .header .data .name {
+    font-size: calc(0.9rem + 0.6vw);
+  }
+  .section .header .data .rol {
+    font-size: calc(0.5rem + 0.5vw);
+  }
+  .grid-container > :nth-child(5) {
+    justify-content: space-between;
+  }
+  .grid-container > :nth-child(5) .paragraph {
+    flex: 1;
+  }
+  .experience {
+    justify-content: space-between;
+  }
+  .experience .container-cards .card {
+    width: 50%;
+  }
+  .projects {
+    gap: 25px;
+  }
+  .projects .container-projects {
+    justify-content: center;
+    gap: 25px;
+  }
+  .projects .container-projects .project .links .link {
+    padding: 2px 7px;
+  }
+}/*# sourceMappingURL=styles.css.map */

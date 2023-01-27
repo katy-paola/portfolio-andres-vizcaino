@@ -1,0 +1,47 @@
+.experience{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    .container-cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        .card{
+            background-color: $cyan;
+            border-radius: 7px;
+            width: 100%;
+            padding: calc($pd-container - 0.5vw);
+            &.igloo{
+                border-top: 2px solid #FF003C;
+            }
+            &.sima{
+                border-top: 2px solid #000;
+            }
+            .logo{
+                width: auto;
+                height: 30px;
+            }
+            .card-title{
+                font-size: calc(0.8rem + 0.3vw);
+                color: $paragraph;
+            }
+            .card-description{
+                line-height: 1.7;
+            }
+            .info-date{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .card-rol,
+                .card-date{
+                    font-size: calc(0.5rem + 0.3vw);
+                }
+            }
+        }
+    }
+}

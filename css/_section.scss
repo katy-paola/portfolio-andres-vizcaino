@@ -1,0 +1,114 @@
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $pd-container;
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        width: 100%;
+        .photo{
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 100%;
+            border: 1px solid fade-out($paragraph, 0.6);
+        }
+        .data{
+            display: flex;
+            flex-direction: column;
+            h1{
+                font-size: calc(0.9rem + 0.3vw);
+                font-weight: 600;
+                color: $text;
+            }
+            h2{
+                font-size: calc(0.5rem + 0.3vw);
+                font-weight: 600;
+                color: fade-out($text, 0.3);
+            }
+        }
+    }
+    .secondary{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .about{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+            ul{
+                display: flex;
+                flex-direction: column;
+                padding: 5px;
+                li{
+                    list-style: none;
+                    font-size: calc(0.4rem + 0.3vw);
+                    text-transform: uppercase;
+                    padding: 3px;
+                    letter-spacing: 1px;
+                    color: $paragraph;
+                    font-weight: bold;
+                }
+            }
+            .item{
+                align-items: end;
+                border-right: 1px solid fade-out($paragraph, 0.6);
+            }
+        }
+        .qualities{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            flex-wrap: wrap;
+            li{
+                list-style: none;
+                font-size: calc(0.4rem + 0.3vw);
+                letter-spacing: 1px;
+                font-weight: bold;
+                padding: 2px 4px;
+                background: $cyan;
+                color: $paragraph;
+                border-radius: 5px;
+            }
+        }
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        gap: 10px;
+        li,
+        li a{
+            list-style: none;
+            color: $paragraph;
+            font-size: calc(0.6rem + 0.3vw);
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            span{
+                &:before{
+                    color: inherit;
+                }
+            }
+            a{
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

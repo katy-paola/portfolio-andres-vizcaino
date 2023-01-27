@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   font-family: $poppins; 
+   font-size: $font-base;
+   background-color: $bg-body;
+   color: $paragraph;
+}
+h1{
+    font-size: calc(0.9rem + 0.3vw);
+    font-weight: 600;
+    color: $text;
+}
+.article,
+.card,
+.projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: $pd-container;
+    text-align: justify;
+}
+.subtitle{
+    font-size: calc(0.7rem + 0.3vw);
+    color: $text;
+}
+p{
+    font-size: calc(0.6rem + 0.3vw);
+    font-weight: 400;
+    color: $paragraph;
+}
+.grid-container{ //mobile 375px
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'section'
+                         'paragraph'
+                         'bio'
+                         'goals'
+                         'motivations'
+                         'experience'
+                         'proyects';
+    grid-gap: 8px;
+    padding: 20px;
+    min-width: 300px;
+    max-width: 1500px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+.grid-container > *{
+    background-color: $bg;
+    color: $white;
+    border-radius: 15px;
+}
+.grid-container > :first-child{
+    grid-area: section;
+}
+.grid-container > :nth-child(2){
+    grid-area: paragraph;
+}
+.grid-container > :nth-child(3){
+    grid-area: bio;
+}
+.grid-container > :nth-child(4){
+    grid-area: goals;
+}
+.grid-container > :nth-child(5){
+    grid-area: motivations;
+}
+.grid-container > :nth-child(6){
+    grid-area: experience;
+}
+.grid-container > :last-child{
+    grid-area: proyects;
+}
+

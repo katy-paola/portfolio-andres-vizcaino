@@ -1,0 +1,161 @@
+@media only screen and (min-width: 510px){ //mobile landscape
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 'section       section'
+                             'paragraph     paragraph'
+                             'bio           bio'
+                             'goals         motivations'
+                             'experience    experience'
+                             'proyects      proyects';
+    }
+    .section{
+        .contact{
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+    .projects{
+        .container-projects{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            .project{
+                width: auto;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 678px){ //tablet
+    .grid-container{
+        grid-template-columns: repeat(2, 1.5fr);
+        grid-template-areas: 'section           section'
+                             'paragraph         paragraph'
+                             'bio               bio'
+                             'goals             motivations'
+                             'experience        proyects';
+    }
+    .section{
+        .secondary{
+            flex-direction: row;
+            .qualities{
+                width: 100%;
+            }
+        }
+    }.projects{
+        justify-content: space-between;
+        .container-projects{
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            flex: 1;
+            .project{
+                width: auto;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 834px){ //tablet
+    .grid-container{
+        grid-template-columns: 1.8fr repeat(2, 1.5fr);
+        grid-template-areas: 'section       paragraph       paragraph'
+                             'section       bio             bio'
+                             'section       goals           motivations'
+                             'experience    experience      experience'
+                             'proyects      proyects        proyects';
+    }
+    .section{
+        justify-content: space-around;
+        .header{
+            .photo{
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .secondary{
+            flex-direction: column;
+            justify-content: space-evenly;
+            flex: 1;
+        }
+        .contact{
+            flex-wrap: wrap;
+        }
+    }
+    .experience{
+        .container-cards{
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: stretch;
+            .card{
+                justify-content: space-between;
+                width: 45%;
+            }
+        }
+    }
+    .projects{
+        .container-projects{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            .project{
+                width: auto;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1200px){ //desktop
+    .grid-container{
+        grid-template-columns: 1.5fr repeat(2, 0.7fr) 1fr;
+        grid-template-areas: 'section       paragraph       paragraph       paragraph'
+                             'section       bio             bio             bio'
+                             'section       goals           motivations     proyects'
+                             'experience    experience      experience      proyects';
+        grid-gap: 20px;
+        padding: 35px;
+    }
+    .section{
+        .header{
+            flex-direction: column;
+            .photo{
+                width: 120px;
+                height: 120px;
+            }
+            .data{
+                align-items: center;
+                .name{
+                    font-size: calc(0.9rem + 0.6vw);
+                }
+                .rol{
+                    font-size: calc(0.5rem + 0.5vw);
+                }
+            }
+        }
+    }
+    .grid-container > :nth-child(5){
+        justify-content: space-between;
+        .paragraph{
+            flex: 1;
+        }
+    }
+    .experience{
+        justify-content: space-between;
+        .container-cards{
+            .card{
+                width: 50%;
+            }
+        }
+    }
+    .projects{
+        gap: 25px;
+        .container-projects{
+            justify-content: center;
+            gap: 25px;
+            .project{
+                .links{
+                    .link{
+                        padding: 2px 7px;
+                    }
+                }
+            }
+        }
+    }
+}

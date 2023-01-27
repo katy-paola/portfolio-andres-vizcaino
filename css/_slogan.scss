@@ -1,0 +1,24 @@
+.slogan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $pd-container;
+    gap: 4px;
+    >*{
+        color: $paragraph;
+        font-weight: bold;
+    }
+    blockquote{
+        font-size: calc(0.6rem + 0.3vw);
+        &:before{
+            content: open-quote;
+        }
+        &:after{
+            content: close-quote;
+        }
+    }
+    cite{
+        font-size: calc(0.5rem + 0.3vw);
+    }
+}
